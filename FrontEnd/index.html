@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HungerZero | Sharing is Caring</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="circles">
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+    </div>
+
+    <nav>
+        <div class="logo">Hunger<span>Zero</span></div>
+        <ul class="nav-links">
+            <li><a href="#" onclick="showSection('hero')">Home</a></li>
+            <li><a href="#" onclick="showSection('auth')">Join Movement</a></li>
+        </ul>
+    </nav>
+
+    <section id="hero" class="content-section active">
+        <div class="hero-text">
+            <h1>Sustain Life, <br><span>Zero Waste.</span></h1>
+            <p>Connecting surplus food from donors to those who need it most. Radiant hearts, peaceful bellies.</p>
+            <button class="btn-primary" onclick="showSection('auth')">Get Started</button>
+        </div>
+    </section>
+
+    <section id="auth" class="content-section">
+        <div class="auth-container">
+            <div class="form-toggle">
+                <button id="loginBtn" class="toggle-active" onclick="toggleAuth('login')">Login</button>
+                <button id="signupBtn" onclick="toggleAuth('signup')">Sign Up</button>
+            </div>
+
+            <form id="loginForm" class="auth-form">
+                <h2>Welcome Back</h2>
+                <input type="email" placeholder="Email Address" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit" class="btn-submit">Sign In</button>
+            </form>
+
+            <form id="signupForm" class="auth-form hidden">
+                <h2>Create Account</h2>
+                <input type="text" placeholder="Full Name" required>
+                <select>
+                    <option value="donor">Register as Donor</option>
+                    <option value="ngo">Register as NGO</option>
+                </select>
+                <input type="email" placeholder="Email Address" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit" class="btn-submit">Join HungerZero</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
